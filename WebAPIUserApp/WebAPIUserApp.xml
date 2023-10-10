@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAPIUserApp</name>
+    </assembly>
+    <members>
+        <member name="T:WebAPIUserApp.Controllers.UserController">
+            <summary>
+            User controller
+            </summary>
+        </member>
+        <member name="M:WebAPIUserApp.Controllers.UserController.GetAllUsers">
+            <summary>
+            Get all users from DB
+            </summary>
+            <returns>Data of users</returns>
+        </member>
+        <member name="M:WebAPIUserApp.Controllers.UserController.GetSpecificUsers(System.Int32,System.Int32,System.String,System.String,System.Int32,System.Int32,System.String,System.String,WebAPIUserApp.Models.Direction)">
+            <summary>
+            Get specific users using filtering and sorting
+            </summary>
+            <param name="page">Page number</param>
+            <param name="pageSize">Page size</param>
+            <param name="nameFilter">Data to filter Name field</param>
+            <param name="emailFilter">Data to filter Email field</param>
+            <param name="ageLimit1">One side age limitation</param>
+            <param name="ageLimit2">Another side age limitation</param>
+            <param name="roleFilter">Data to filter Roles field</param>
+            <param name="propertyForOrdering">Property (field) to order result</param>
+            <param name="direction">Ascending or descending direction of ordering</param>
+            <returns>Data of choosen users</returns>
+        </member>
+        <member name="M:WebAPIUserApp.Controllers.UserController.GetUser(System.Guid)">
+            <summary>
+            Get user's information with selected Id
+            </summary>
+            <param name="id">User's Id</param>
+            <returns>User's information</returns>
+        </member>
+        <member name="M:WebAPIUserApp.Controllers.UserController.GetUserRoles(System.Guid)">
+            <summary>
+            Get roles of selected user
+            </summary>
+            <param name="id">User's Id</param>
+            <returns>User's roles</returns>
+        </member>
+        <member name="M:WebAPIUserApp.Controllers.UserController.CreateUser(WebAPIUserApp.Models.UserDto)">
+            <summary>
+            Create a new user
+            </summary>
+            <param name="data">User's information</param>
+            <returns>Status code</returns>
+        </member>
+        <member name="M:WebAPIUserApp.Controllers.UserController.UpdateUser(System.Guid,WebAPIUserApp.Models.UserDto)">
+            <summary>
+            Update user's information
+            </summary>
+            <param name="userId">Id of a user we should update</param>
+            <param name="updatedData">New user's information</param>
+            <returns>Status code</returns>
+        </member>
+        <member name="M:WebAPIUserApp.Controllers.UserController.AddRoleToUser(System.Guid,System.String)">
+            <summary>
+            Add a new role for a user
+            </summary>
+            <param name="userId">User's id</param>
+            <param name="roleName">Role's name we should to add</param>
+            <returns>Status code</returns>
+        </member>
+        <member name="M:WebAPIUserApp.Controllers.UserController.DeleteUser(System.Guid)">
+            <summary>
+            Delete user
+            </summary>
+            <param name="userId">Id of a user we should delete</param>
+            <returns>Status code</returns>
+        </member>
+        <member name="T:WebAPIUserApp.Domain.AppDbContext">
+            <summary>
+            AppDbContext class
+            </summary>
+        </member>
+        <member name="M:WebAPIUserApp.Domain.AppDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{WebAPIUserApp.Domain.AppDbContext})">
+            <summary>
+            Initializes a new instance of the <see cref="T:WebAPIUserApp.Domain.AppDbContext"/> class.
+            </summary>
+            <param name="options">DbContext Options.</param>
+        </member>
+        <member name="T:WebAPIUserApp.Domain.Repositories.EntityFramework.EFRoleRepository">
+            <summary>
+            EntityFramework realization of IRoleRepository
+            </summary>
+        </member>
+        <member name="T:WebAPIUserApp.Domain.Repositories.EntityFramework.EFUserRepository">
+            <summary>
+            EntityFramework realization of IUserRepository
+            </summary>
+        </member>
+        <member name="T:WebAPIUserApp.Migrations._initial">
+            <inheritdoc />
+        </member>
+        <member name="M:WebAPIUserApp.Migrations._initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebAPIUserApp.Migrations._initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebAPIUserApp.Migrations._initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:WebAPIUserApp.Models.Direction">
+            <summary>
+            Enum for ordering direction
+            </summary>
+        </member>
+        <member name="F:WebAPIUserApp.Models.Direction.asc">
+            <summary>
+            Ascending order
+            </summary>
+        </member>
+        <member name="F:WebAPIUserApp.Models.Direction.desc">
+            <summary>
+            Descending order
+            </summary>
+        </member>
+        <member name="T:WebAPIUserApp.Models.Role">
+            <summary>
+            A role that a user can get
+            </summary>
+        </member>
+        <member name="T:WebAPIUserApp.Models.RoleDto">
+            <summary>
+            Shortened representation of role entity
+            </summary>
+        </member>
+        <member name="T:WebAPIUserApp.Models.User">
+            <summary>
+            User entity. Main class
+            </summary>
+        </member>
+        <member name="T:WebAPIUserApp.Models.UserDto">
+            <summary>
+            User info to create a new user
+            </summary>
+        </member>
+    </members>
+</doc>

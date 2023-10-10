@@ -1,0 +1,6 @@
+2023-10-10 22:15:27.928 +03:00 [ERR] User's name is null or empty
+2023-10-10 22:45:41.071 +03:00 [ERR] Getting user by Id error. Selected user doesn't exist
+2023-10-10 22:46:01.874 +03:00 [ERR] Getting user's roles error. Selected user doesn't exist
+2023-10-10 22:46:29.624 +03:00 [ERR] User creation error. User's email is null or empty
+2023-10-10 22:46:40.143 +03:00 [ERR] User creation error. User's age is a negative number
+2023-10-10 22:47:05.151 +03:00 [ERR] Adding new role error. Selected role doesn't exist

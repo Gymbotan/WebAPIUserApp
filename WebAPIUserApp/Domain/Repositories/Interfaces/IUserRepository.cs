@@ -2,6 +2,9 @@
 
 namespace WebAPIUserApp.Domain.Repositories.Interfaces
 {
+    /// <summary>
+    /// IUserRepository interface
+    /// </summary>
     public interface IUserRepository
     {
         public IQueryable<User> GetAllUsers();

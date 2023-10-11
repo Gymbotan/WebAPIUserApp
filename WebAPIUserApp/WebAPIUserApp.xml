@@ -85,6 +85,21 @@
             </summary>
             <param name="options">DbContext Options.</param>
         </member>
+        <member name="T:WebAPIUserApp.Domain.Extension">
+            <summary>
+            Extension class
+            </summary>
+        </member>
+        <member name="M:WebAPIUserApp.Domain.Extension.ApplyOrder(System.Linq.IQueryable{WebAPIUserApp.Models.User},System.String,WebAPIUserApp.Models.Direction)">
+            <summary>
+            Extension for LINQ query for User class. It orders the query by the selected property
+            in the selected direction
+            </summary>
+            <param name="query">Query to order</param>
+            <param name="property">Property name</param>
+            <param name="direction">Ordering direction</param>
+            <returns>Ordered query</returns>
+        </member>
         <member name="T:WebAPIUserApp.Domain.Repositories.EntityFramework.EFRoleRepository">
             <summary>
             EntityFramework realization of IRoleRepository
@@ -93,6 +108,16 @@
         <member name="T:WebAPIUserApp.Domain.Repositories.EntityFramework.EFUserRepository">
             <summary>
             EntityFramework realization of IUserRepository
+            </summary>
+        </member>
+        <member name="T:WebAPIUserApp.Domain.Repositories.Interfaces.IRoleRepository">
+            <summary>
+            IRoleRepository interface
+            </summary>
+        </member>
+        <member name="T:WebAPIUserApp.Domain.Repositories.Interfaces.IUserRepository">
+            <summary>
+            IUserRepository interface
             </summary>
         </member>
         <member name="T:WebAPIUserApp.Migrations._initial">

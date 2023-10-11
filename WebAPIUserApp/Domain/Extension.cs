@@ -2,8 +2,19 @@
 
 namespace WebAPIUserApp.Domain
 {
+    /// <summary>
+    /// Extension class
+    /// </summary>
     public static class Extension
     {
+        /// <summary>
+        /// Extension for LINQ query for User class. It orders the query by the selected property
+        /// in the selected direction
+        /// </summary>
+        /// <param name="query">Query to order</param>
+        /// <param name="property">Property name</param>
+        /// <param name="direction">Ordering direction</param>
+        /// <returns>Ordered query</returns>
         public static IQueryable<User> ApplyOrder(this IQueryable<User> query, string property, Direction direction)
         {
             switch((property.ToLower(), direction))

@@ -2,6 +2,9 @@
 
 namespace WebAPIUserApp.Domain.Repositories.Interfaces
 {
+    /// <summary>
+    /// IRoleRepository interface
+    /// </summary>
     public interface IRoleRepository
     {
         public Role GetRoleByName(string roleName);
